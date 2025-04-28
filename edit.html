@@ -1,0 +1,13 @@
+
+<!doctype html>
+<html>
+<head><title>Edit Naskah</title></head>
+<body>
+<h1>Edit Naskah</h1>
+<form method="post">
+    Judul: <input type="text" name="judul" value="{{ naskah[1] }}"><br>
+    Isi: <textarea name="isi">{{ naskah[2] }}</textarea><br>
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

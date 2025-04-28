@@ -1,0 +1,24 @@
+
+<!doctype html>
+<html>
+<head><title>Admin Panel</title></head>
+<body>
+<h1>Admin Panel</h1>
+<form method="post" action="/upload">
+    Judul: <input type="text" name="judul"><br>
+    Isi: <textarea name="isi"></textarea><br>
+    <input type="submit" value="Upload">
+</form>
+<h2>Daftar Naskah</h2>
+<ul>
+{% for naskah in naskah_list %}
+<li>
+<strong>{{ naskah[1] }}</strong> - {{ naskah[2] }}
+<a href="/edit/{{ naskah[0] }}">Edit</a> | 
+<a href="/delete/{{ naskah[0] }}">Hapus</a>
+</li>
+{% endfor %}
+</ul>
+<a href="/logout">Logout</a>
+</body>
+</html>

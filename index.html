@@ -1,0 +1,14 @@
+
+<!doctype html>
+<html>
+<head><title>TerasNaskah</title></head>
+<body>
+<h1>Daftar Naskah</h1>
+<ul>
+{% for naskah in naskah_list %}
+<li><strong>{{ naskah[1] }}</strong> - {{ naskah[2] }}</li>
+{% endfor %}
+</ul>
+<a href="/login">Login Admin</a>
+</body>
+</html>
